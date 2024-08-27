@@ -1,10 +1,8 @@
-#https://tavily.com/
-# Use search terms: 
-# Eden Marco Google Linkedin
 from langchain_community.tools.tavily_search import TavilySearchResults
 
+
 def get_profile_url_tavily(name: str):
-    """Searches for linkedin or Twitter profile Page."""
+    """Searches for Linkedin or Twitter Profile Page."""
     search = TavilySearchResults()
     res = search.run(f"{name}")
     return res[0]["url"]
